@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Draggable - Default functionality</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <!--link rel="stylesheet" href="/resources/demos/style.css"-->
+  <style>
+  html,body {height: 100%}
+  .numbers-to-drag {height:7%}
+  .draggable { width: 20px; height: 20px; padding: 0.5em; border-width: 1px; border-color: black; float:left;}
+  .map {height: 70%;}
+  .numbers-to-drag > .draggable {
+    display: table-row;
+   }
+   .draggable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+ }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( ".draggable" ).draggable();
+  } );
+  </script>
+</head>
+<body>
+
+<div class="numbers-to-drag">
+<div class="draggable">
+  <p>1</p>
+</div>
+<div class="draggable">
+  <p>2</p>
+</div>
+<div class="draggable">
+  <p>3</p>
+</div>
+<div class="draggable">
+  <p>4</p>
+</div>
+<div class="draggable">
+  <p>5</p>
+</div>
+</div>
+
+<div class="map">
+<img src="usa.png" height=100%>
+</div>
+
+<table>
+  <tr><th></th><th>Song</th><th>Artist</th><th>City</th></tr>
+  <tr><td>1</td><td><audio controls><source src="horse.mp3" type="audio/mpeg"></audio></td><td><input type="text"></td><th><input type="text"></td></tr>
+</table>
+</body>
+</html>
