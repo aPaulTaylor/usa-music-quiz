@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>US Cities Music Quiz</title>
+  <title>Do You Know The Location Of San Jose?</title>
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <!--link rel="stylesheet" href="/resources/demos/style.css"-->
   <style>
@@ -25,26 +25,32 @@
     user-select: none;
   }
 
+  input[type="text"]
+  {
+      font-size:24px;
+  }
+
   table {
+    font-size: 20px;
     margin-top: 10px;
     border: solid 1px #DDEEEE;
     border-collapse: collapse;
     border-spacing: 0;
-}
-thead th {
-    background-color: #DDEFEF;
-    border: solid 1px #DDEEEE;
-    color: #336B6B;
-    padding: 10px;
-    text-align: left;
-    text-shadow: 1px 1px 1px #fff;
-}
-tbody td {
-    border: solid 1px #DDEEEE;
-    color: #333;
-    padding: 10px;
-    text-shadow: 1px 1px 1px #fff;
-}
+  }
+  thead th {
+      background-color: #DDEFEF;
+      border: solid 1px #DDEEEE;
+      color: #336B6B;
+      padding: 10px;
+      text-align: left;
+      text-shadow: 1px 1px 1px #fff;
+  }
+  tbody td {
+      border: solid 1px #DDEEEE;
+      color: #333;
+      padding: 10px;
+      text-shadow: 1px 1px 1px #fff;
+  }
 
   </style>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -79,16 +85,16 @@ tbody td {
   <tr><th>#</th><th>Song</th><th>Artist</th><th>City</th><th>✔</th></tr>
 </thead>
 <tbody>
-  <tr><td>1</td><td><audio controls><source src="clips/q1.mp3" type="audio/mpeg"></audio></td><td><input type="text"></td><td><input type="text"></td><td><input type="checkbox"><input type="checkbox"><input type="checkbox"></td></tr>
-  <tr><td>2</td><td><audio controls><source src="clips/q2.mp3" type="audio/mpeg"></audio></td><td><input type="text"></td><td><input type="text"></td><td><input type="checkbox"><input type="checkbox"><input type="checkbox"></td></tr>
-  <tr><td>3</td><td><audio controls><source src="clips/q3.mp3" type="audio/mpeg"></audio></td><td><input type="text"></td><td><input type="text"></td><td><input type="checkbox"><input type="checkbox"><input type="checkbox"></td></tr>
-  <tr><td>4</td><td><audio controls><source src="clips/q4.mp3" type="audio/mpeg"></audio></td><td><input type="text"></td><td><input type="text"></td><td><input type="checkbox"><input type="checkbox"><input type="checkbox"></td></tr>
-  <tr><td>5</td><td><audio controls><source src="clips/q5.mp3" type="audio/mpeg"></audio></td><td><input type="text"></td><td><input type="text"></td><td><input type="checkbox"><input type="checkbox"><input type="checkbox"></td></tr>
-  <tr><td>6</td><td><audio controls><source src="clips/q6.mp3" type="audio/mpeg"></audio></td><td><input type="text"></td><td><input type="text"></td><td><input type="checkbox"><input type="checkbox"><input type="checkbox"></td></tr>
-  <tr><td>7</td><td><audio controls><source src="clips/q7.mp3" type="audio/mpeg"></audio></td><td><input type="text"></td><td><input type="text"></td><td><input type="checkbox"><input type="checkbox"><input type="checkbox"></td></tr>
-  <tr><td>8</td><td><audio controls><source src="clips/q8.mp3" type="audio/mpeg"></audio></td><td><input type="text"></td><td><input type="text"></td><td><input type="checkbox"><input type="checkbox"><input type="checkbox"></td></tr>
-  <tr><td>9</td><td><audio controls><source src="clips/q9.mp3" type="audio/mpeg"></audio></td><td><input type="text"></td><td><input type="text"></td><td><input type="checkbox"><input type="checkbox"><input type="checkbox"></td></tr>
-  <tr><td>10</td><td><audio controls><source src="clips/q10.mp3" type="audio/mpeg"></audio></td><td><input type="text"></td><td><input type="text"></td><td><input type="checkbox"><input type="checkbox"><input type="checkbox"></td></tr>
+  <tr><td>1</td><td><audio controls><source src="clips/q1.mp3" type="audio/mpeg"></audio></td><td><input type="text" size=12></td><td><input type="text" size=12></td><td><input type="checkbox"><input type="checkbox"><input type="checkbox"></td></tr>
+  <tr><td>2</td><td><audio controls><source src="clips/q2.mp3" type="audio/mpeg"></audio></td><td><input type="text" size=12></td><td><input type="text" size=12></td><td><input type="checkbox"><input type="checkbox"><input type="checkbox"></td></tr>
+  <tr><td>3</td><td><audio controls><source src="clips/q3.mp3" type="audio/mpeg"></audio></td><td><input type="text" size=12></td><td><input type="text" size=12></td><td><input type="checkbox"><input type="checkbox"><input type="checkbox"></td></tr>
+  <tr><td>4</td><td><audio controls><source src="clips/q4.mp3" type="audio/mpeg"></audio></td><td><input type="text" size=12></td><td><input type="text" size=12></td><td><input type="checkbox"><input type="checkbox"><input type="checkbox"></td></tr>
+  <tr><td>5</td><td><audio controls><source src="clips/q5.mp3" type="audio/mpeg"></audio></td><td><input type="text" size=12></td><td><input type="text" size=12></td><td><input type="checkbox"><input type="checkbox"><input type="checkbox"></td></tr>
+  <tr><td>6</td><td><audio controls><source src="clips/q6.mp3" type="audio/mpeg"></audio></td><td><input type="text" size=12></td><td><input type="text" size=12></td><td><input type="checkbox"><input type="checkbox"><input type="checkbox"></td></tr>
+  <tr><td>7</td><td><audio controls><source src="clips/q7.mp3" type="audio/mpeg"></audio></td><td><input type="text" size=12></td><td><input type="text" size=12></td><td><input type="checkbox"><input type="checkbox"><input type="checkbox"></td></tr>
+  <tr><td>8</td><td><audio controls><source src="clips/q8.mp3" type="audio/mpeg"></audio></td><td><input type="text" size=12></td><td><input type="text" size=12></td><td><input type="checkbox"><input type="checkbox"><input type="checkbox"></td></tr>
+  <tr><td>9</td><td><audio controls><source src="clips/q9.mp3" type="audio/mpeg"></audio></td><td><input type="text" size=12></td><td><input type="text" size=12></td><td><input type="checkbox"><input type="checkbox"><input type="checkbox"></td></tr>
+  <tr><td>10</td><td><audio controls><source src="clips/q10.mp3" type="audio/mpeg"></audio></td><td><input type="text" size=12></td><td><input type="text" size=12></td><td><input type="checkbox"><input type="checkbox"><input type="checkbox"></td></tr>
 </tbody>
 </table>
 </body>
