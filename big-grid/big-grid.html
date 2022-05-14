@@ -5,11 +5,12 @@
     <title>Big Grid Of Songs</title>
 </head>
 <body style="font-family: 'Oswald', sans-serif;">
+Fill the grid with UK Top 10 hits with two-word titles, where both words have between 3 and 8 letters. Click 'Get Artists' to see a random artist with a song that fits in each unfilled square. Click 'Get Artists and initials' to also get the initial letters of the song.
 <table id="songstable" style="width:800px; height:600px; table-layout: fixed; border: 1px solid black">
 </table>
 <p>
-<input id="guesses" length=11/> <button type="button" onclick="getArtists()">Get Artists</button>
-</p>
+<input id="guesses" length=11/> <button type="button" onclick="getArtists()">Get Artists</button> <button type="button" onclick="getArtistsInits()">Get Artists and initials</button>
+ </p>
 </body>
 <script>
 songs_table = document.getElementById('songstable');
@@ -53,6 +54,20 @@ function getArtists(){
         if(!songCell.innerHTML.includes('<b>')){
             answerSongs=answers[songCell.getAttribute('id')]
             songCell.innerHTML='('+songCell.getAttribute('id')+') '+answerSongs[Math.floor(Math.random()*answerSongs.length)]['artist'];
+        }
+    }
+}
+
+function getArtistsInits(){
+    allCells=document.getElementsByTagName('td');
+    for(i=0;i<allCells.length;i++){
+        songCell=allCells[i];
+        if(!songCell.innerHTML.includes('<b>')){
+            answerSongs=answers[songCell.getAttribute('id')]
+            songPos=Math.floor(Math.random()*answerSongs.length)
+            hintTitle=answerSongs[songPos]['sanitized_title']
+            hintInits=hintTitle.substring(0,1)+'___ '+hintTitle.substring(hintTitle.indexOf(' ')+1,hintTitle.indexOf(' ')+2)+'___'
+            songCell.innerHTML='('+songCell.getAttribute('id')+') '+answerSongs[songPos]['artist']+'<br>'+hintInits;
         }
     }
 }
