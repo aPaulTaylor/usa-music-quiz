@@ -8,7 +8,7 @@
 <table id="songstable" style="width:800px; height:600px; table-layout: fixed; border: 1px solid black">
 </table>
 <p>
-<input id="guesses" length=11/>
+<input id="guesses" length=11/> <button type="button" onclick="getArtists()">Get Artists</button>
 </p>
 </body>
 <script>
@@ -21,6 +21,7 @@ for(var i=3; i<9; i++) {
     for(var j=3; j<9; j++) {
         gridCell = document.createElement('td');
         gridCell.setAttribute('id',''+i+','+j);
+        gridCell.innerHTML='('+i+','+j+')'
         gridRow.appendChild(gridCell);
     }
     songs_table.appendChild(gridRow);
@@ -44,6 +45,17 @@ guessbox.addEventListener('input', function inputInputEventHandler(e) {
         }
     }
 });
+
+function getArtists(){
+    allCells=document.getElementsByTagName('td');
+    for(i=0;i<allCells.length;i++){
+        songCell=allCells[i];
+        if(!songCell.innerHTML.includes('<b>')){
+            answerSongs=answers[songCell.getAttribute('id')]
+            songCell.innerHTML='('+songCell.getAttribute('id')+') '+answerSongs[Math.floor(Math.random()*answerSongs.length)]['artist'];
+        }
+    }
+}
 
 answers={
   "3,3": [
