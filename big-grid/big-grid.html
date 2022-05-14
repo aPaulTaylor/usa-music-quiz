@@ -9,12 +9,13 @@ Fill the grid with UK Top 10 hits with two-word titles, where both words have be
 <table id="songstable" style="width:800px; height:600px; table-layout: fixed; border: 1px solid black">
 </table>
 <p>
-<input id="guesses" length=11/> <button type="button" onclick="getArtists()">Get Artists</button> <button type="button" onclick="getArtistsInits()">Get Artists and initials</button>
+<input id="guesses" length=11/> <button type="button" onclick="getArtists()">Get Artists</button> <button type="button" onclick="getArtistsInits()">Get Artists and initials</button> Score: <span id="score">100</span>
  </p>
 </body>
 <script>
 songs_table = document.getElementById('songstable');
 guessbox = document.getElementById('guesses');
+score=100;
 console.log('hi');
 for(var i=3; i<9; i++) {
     gridRow = document.createElement('tr');
@@ -56,6 +57,8 @@ function getArtists(){
             songCell.innerHTML='('+songCell.getAttribute('id')+') '+answerSongs[Math.floor(Math.random()*answerSongs.length)]['artist'];
         }
     }
+    score -=1;
+    document.getElementById('score').innerHTML=score;
 }
 
 function getArtistsInits(){
@@ -70,6 +73,8 @@ function getArtistsInits(){
             songCell.innerHTML='('+songCell.getAttribute('id')+') '+answerSongs[songPos]['artist']+'<br>'+hintInits;
         }
     }
+    score -=2;
+    document.getElementById('score').innerHTML=score;
 }
 
 answers={
